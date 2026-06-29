@@ -1,0 +1,467 @@
+/*  */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#f6f4eb;
+}
+
+.profile-container{
+display:flex;
+min-height:100vh;
+}
+
+.sidebar{
+width:280px;
+background:#fff;
+padding:25px;
+box-shadow:0 0 15px rgba(0,0,0,.08);
+}
+
+.user-card{
+text-align:center;
+padding-bottom:25px;
+border-bottom:1px solid #eee;
+}
+
+.avatar{
+width:90px;
+height:90px;
+background:#0e3014;
+color:#fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+margin:auto;
+margin-bottom:15px;
+}
+
+.user-card h3{
+color:#0e3014;
+}
+
+.sidebar ul{
+list-style:none;
+margin-top:25px;
+}
+
+.sidebar ul li{
+padding:15px;
+border-radius:10px;
+margin-bottom:10px;
+cursor:pointer;
+}
+
+.sidebar ul li a{
+text-decoration:none;
+color:#333;
+}
+
+.active{
+background:#0e3014;
+color:white;
+}
+
+.logout{
+color:red !important;
+font-weight:bold;
+}
+
+.content{
+flex:1;
+padding:40px;
+}
+
+.welcome-card{
+background:white;
+padding:30px;
+border-radius:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.welcome-card h1{
+color:#0e3014;
+}
+
+.badge{
+background:#f5e7b0;
+padding:10px 20px;
+border-radius:30px;
+font-weight:600;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:25px;
+}
+
+.stat-card{
+background:white;
+padding:25px;
+text-align:center;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.stat-card h2{
+color:#0e3014;
+font-size:35px;
+}
+
+.orders-card{
+background:white;
+margin-top:25px;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card-header{
+margin-bottom:20px;
+}
+
+/* .order-row{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:15px 0;
+border-bottom:1px solid #eee;
+} */
+/* 
+.order-row img{
+width:70px;
+height:70px;
+object-fit:cover;
+border-radius:10px;
+} */
+
+
+
+
+
+
+
+.order-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:15px 0;
+    border-bottom:1px solid #eee;
+}
+
+.order-item:last-child{
+    border-bottom:none;
+}
+
+.order-item img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.order-item div{
+    flex:1;
+}
+
+.order-item h4{
+    font-size:14px;
+    margin-bottom:5px;
+    color:#111;
+}
+
+.order-item p{
+    color:#666;
+    font-size:16px;
+}
+
+.order-item strong{
+    font-size:22px;
+    color:#0a4b1a;
+    font-weight:700;
+}
+
+
+
+
+
+.profile-top{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:20px;
+}
+
+.back-btn{
+    background:#0e3014;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#145221;
+}
+
+
+
+/*  */
+
+
+
+@media screen and (max-width:576px){
+
+.profile-container{
+    flex-direction:column;
+}
+
+/* Sidebar Top */
+
+.sidebar{
+    width:100%;
+    padding:15px;
+    box-shadow:none;
+    border-bottom:1px solid #eee;
+}
+
+.user-card{
+    padding-bottom:15px;
+}
+
+.avatar{
+    width:70px;
+    height:70px;
+    font-size:28px;
+}
+
+/* Menu */
+
+.sidebar ul{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.sidebar ul li{
+    margin:0;
+    padding:12px;
+    text-align:center;
+    background:#f8f8f8;
+}
+
+.active{
+    background:#0e3014;
+}
+
+/* Content */
+
+.content{
+    padding:15px;
+}
+
+/* Welcome */
+
+.welcome-card{
+    padding:20px;
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
+}
+
+.welcome-card h1{
+    font-size:22px;
+}
+
+/* Hide Stats */
+
+.stats{
+    display:none;
+    display:grid;
+grid-template-columns:repeat(3,1fr);
+}
+
+/* Recent Orders Full Width */
+
+.orders-card{
+    width:100%;
+    margin-top:15px;
+    padding:20px;
+}
+
+/* Order Card */
+
+.order-item{
+    align-items:center;
+    gap:12px;
+}
+
+.order-item img{
+    width:70px;
+    height:70px;
+}
+
+.order-item h4{
+    font-size:15px;
+}
+
+.order-item p{
+    font-size:13px;
+}
+
+.order-item strong{
+    font-size:16px;
+}
+
+
+
+
+  .profile-top{
+        justify-content:center;
+        margin-bottom:15px;
+    }
+
+    .back-btn{
+        width:100%;
+        text-align:center;
+    }
+}
+
+
+
+
+
+/* =========================
+   TABLET VIEW (786px)
+========================= */
+
+@media screen and (max-width:786px){
+
+    .profile-container{
+        flex-direction:column;
+    }
+
+    /* Sidebar Top */
+    .sidebar{
+        width:100%;
+        padding:20px;
+        box-shadow:none;
+        border-bottom:1px solid #eee;
+    }
+
+    .user-card{
+        text-align:center;
+        margin-bottom:20px;
+    }
+
+    .avatar{
+        width:80px;
+        height:80px;
+        font-size:35px;
+    }
+
+    /* Menu Horizontal */
+    .sidebar ul{
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px;
+        margin-top:15px;
+    }
+
+    .sidebar ul li{
+        margin:0;
+        padding:12px 18px;
+        background:#f8f8f8;
+    }
+
+    .content{
+        padding:20px;
+    }
+
+    /* Welcome Card */
+    .welcome-card{
+        padding:25px;
+    }
+
+    .welcome-card h1{
+        font-size:28px;
+    }
+
+    /* Stats Cards */
+    .stats{
+        grid-template-columns:1fr 1fr;
+        gap:15px;
+    }
+
+    .stat-card{
+        min-height:180px;
+    }
+
+    /* Address Card Hide */
+    .stat-card:nth-child(2){
+        display:none;
+    }
+
+    /* Recent Orders Full Width */
+    .orders-card{
+        margin-top:20px;
+    }
+
+    .order-item{
+        gap:15px;
+    }
+
+    .order-item img{
+        width:75px;
+        height:75px;
+    }
+
+    .order-item h4{
+        font-size:16px;
+    }
+
+    .order-item strong{
+        font-size:18px;
+    }
+
+
+
+
+       .profile-top{
+        display:flex;
+        justify-content:flex-end;
+        margin-bottom:20px;
+    }
+
+    .back-btn{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        height:45px;
+        padding:0 20px;
+
+        background:#0e3014;
+        color:#fff;
+        text-decoration:none;
+        border-radius:10px;
+        font-size:14px;
+        font-weight:600;
+    }
+
+}

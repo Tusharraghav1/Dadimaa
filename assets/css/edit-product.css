@@ -1,0 +1,496 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body{
+    background:#f4f6f9;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    min-height:100vh;
+    padding:30px 15px;
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+    width:100%;
+    max-width:680px;
+    background:#fff;
+    border-radius:16px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.container h2{
+    text-align:center;
+    font-size:42px;
+    color:#1d2b44;
+    margin-bottom:30px;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+.form-group{
+    margin-bottom:22px;
+}
+
+/* .form-group label{
+    display:block;
+    font-size:17px;
+    font-weight:600;
+    color:#333;
+    margin-bottom:8px;
+} */
+
+.form-group > label:not(.upload-btn){
+    display:block;
+    font-size:17px;
+    font-weight:600;
+    color:#333;
+    margin-bottom:8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="file"]{
+
+    width:100%;
+    height:50px;
+    padding:0 16px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+.form-group input:focus{
+
+    border-color:#28a745;
+    box-shadow:0 0 8px rgba(40,167,69,.2);
+
+}
+
+/* ==========================
+   IMAGE
+========================== */
+
+
+/* ==========================
+   CUSTOM FILE INPUT
+========================== */
+
+#image{
+    display:none;
+}
+
+/* .upload-btn{
+    display:inline-block;
+    padding:12px 18px;
+    background:#1d2b44;
+    color:#fff;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.upload-btn:hover{
+    background:#111c2f;
+} */
+.upload-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    height:50px;
+    background:#1d2b44;
+    color:#fff !important;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+    text-align:center;
+}
+
+.upload-btn:hover{
+    background:#111c2f;
+    color:#fff !important;
+}
+/* #file-name{
+    margin-left:12px;
+    color:#666;
+    font-size:14px;
+    pointer-events:none;
+} */
+#file-name{
+    display:block;
+    margin-top:10px;
+    color:#555;
+    font-size:15px;
+}
+.preview{
+
+    width:140px;
+    height:140px;
+    object-fit:cover;
+    border-radius:10px;
+    border:2px solid #ddd;
+    margin-top:10px;
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.buttons{
+
+    display:flex;
+    gap:15px;
+    margin-top:25px;
+
+}
+
+.buttons button{
+
+    flex:1;
+    height:48px;
+    background:#28a745;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.buttons button:hover{
+
+    background:#218838;
+
+}
+
+.buttons a{
+
+    flex:1;
+    height:48px;
+    background:#1d2b44;
+    color:#fff;
+    text-decoration:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.buttons a:hover{
+
+    background:#111c2f;
+
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width:768px){
+
+    body{
+
+        padding:20px;
+
+    }
+
+    .container{
+
+        max-width:600px;
+        padding:25px;
+
+    }
+
+    .container h2{
+
+        font-size:34px;
+
+    }
+
+    .form-group label{
+
+        font-size:16px;
+
+    }
+
+    .form-group input{
+
+        height:48px;
+        font-size:15px;
+
+     
+
+    }
+
+    /* .form-group input[type="file"]{
+    height:48px;
+    display:flex;
+    align-items:center;
+    padding:8px 12px;
+} */
+
+.form-group input[type="file"]{
+    width:100%;
+    height:50px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:10px;
+    font-size:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+input[type="file"]::file-selector-button{
+    height:32px;
+    padding:0 15px;
+    border:none;
+    border-radius:6px;
+    background:#1d2b44;
+    color:#fff;
+    cursor:pointer;
+    margin-right:12px;
+}
+
+    .preview{
+
+        width:120px;
+        height:120px;
+
+    }
+
+    .buttons{
+
+        gap:12px;
+
+    }
+
+    .buttons button,
+    .buttons a{
+
+        height:46px;
+        font-size:15px;
+
+    }
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+/* ==========================
+   MOBILE
+========================== */
+
+/* ===============================
+   MOBILE (All Phones)
+================================ */
+
+@media screen and (max-width:576px){
+
+    /* body{
+        display:block;
+        padding:12px;
+    }
+
+    .container{
+
+        width:100%;
+        max-width:100%;
+        margin:0 auto;
+        padding:22px 18px;
+        border-radius:12px;
+
+    }
+
+    .container h2{
+
+        font-size:30px;
+        margin-bottom:22px;
+
+    }
+
+    .form-group{
+
+        margin-bottom:18px;
+
+    }
+
+    .form-group label{
+
+        font-size:15px;
+
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group input[type="file"]{
+
+        width:100%;
+        height:48px;
+        padding:0 14px;
+        font-size:15px;
+
+    }
+
+    .preview{
+
+        width:120px;
+        height:120px;
+
+    }
+
+    .buttons{
+
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+
+    }
+
+    .buttons button,
+    .buttons a{
+
+        width:100%;
+        height:48px;
+        font-size:15px;
+
+    } */
+
+
+
+    @media screen and (max-width:576px){
+
+    body{
+        background:#f4f6f9;
+        padding:8px;
+        display:flex;
+        justify-content:center;
+        align-items:flex-start;
+    }
+
+    .container{
+
+        width:100%;
+        max-width:420px;   /* Mobile me bada card */
+        padding:25px 20px;
+        border-radius:14px;
+
+    }
+
+    .container h2{
+
+        font-size:34px;
+        margin-bottom:25px;
+
+    }
+
+    .form-group{
+
+        margin-bottom:20px;
+
+    }
+
+    .form-group > label:not(.upload-btn){
+
+        font-size:16px;
+
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="number"]{
+
+        height:50px;
+        font-size:16px;
+
+    }
+
+    .preview{
+
+        width:130px;
+        height:130px;
+
+    }
+
+    /* Upload */
+
+    .file-upload{
+
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+
+    }
+
+    .upload-btn{
+
+        width:100%;
+        height:50px;
+        justify-content:center;
+
+    }
+
+    #file-name{
+
+        font-size:14px;
+
+    }
+
+    /* Buttons */
+
+    .buttons{
+
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+
+    }
+
+    .buttons button,
+    .buttons a{
+
+        width:100%;
+        height:50px;
+        font-size:16px;
+
+    }
+
+}
+}

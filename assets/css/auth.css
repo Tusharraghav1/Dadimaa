@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+/* Form Container */
+.container{
+    width:400px;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+.container h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+/* Inputs */
+.container input{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+    outline:none;
+}
+
+.container input:focus{
+    border-color:#0f5132;
+}
+
+/* Button */
+.container button{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#0f5132;
+    color:white;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.container button:hover{
+    background:#198754;
+}
+
+/* Links */
+.container a{
+    display:block;
+    text-align:center;
+    margin-top:15px;
+    text-decoration:none;
+    color:#0f5132;
+    font-weight:bold;
+}
+
+.container a:hover{
+    color:#198754;
+}
+
+/* Message */
+.message{
+    text-align:center;
+    color:green;
+    margin-top:10px;
+}
+
+.error{
+    text-align:center;
+    color:red;
+    margin-top:10px;
+}
+
+/* Dashboard */
+.dashboard{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+    width:500px;
+}
+
+.dashboard h2{
+    margin-bottom:15px;
+}
+
+.dashboard p{
+    margin-bottom:10px;
+}
+
+/* Logout Button */
+.logout-btn{
+    display:inline-block;
+    padding:10px 20px;
+    background:red;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    margin-top:15px;
+}
+
+.logout-btn:hover{
+    background:darkred;
+}
+
+/* Mobile */
+@media(max-width:576px){
+
+    .container{
+        width:90%;
+        padding:20px;
+    }
+
+    .dashboard{
+        width:90%;
+    }
+
+    .container h2{
+        font-size:22px;
+    }
+}

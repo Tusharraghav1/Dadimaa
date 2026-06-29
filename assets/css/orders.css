@@ -1,0 +1,763 @@
+/* =====================================
+   GLOBAL
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    padding:30px;
+    color:#1e293b;
+}
+
+.container{
+    max-width:1300px;
+    margin:auto;
+}
+
+
+/* Default */
+
+.desktop-table{
+    display:block;
+}
+
+.mobile-products{
+    display:none;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.header h1{
+    font-size:34px;
+    font-weight:700;
+}
+
+.back-btn{
+    text-decoration:none;
+    background:#1e293b;
+    color:#fff;
+    padding:12px 22px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#0f172a;
+}
+
+/* =====================================
+   TABLE
+===================================== */
+
+.table-box{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.table-box table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.table-box thead{
+    background:#1e293b;
+}
+
+.table-box thead th{
+    color:#fff;
+    padding:18px;
+    text-align:left;
+    font-size:15px;
+    font-weight:600;
+}
+
+.table-box tbody td{
+    padding:18px;
+    border-bottom:1px solid #eee;
+    font-size:15px;
+}
+
+.table-box tbody tr:last-child td{
+    border-bottom:none;
+}
+
+.table-box tbody tr:hover{
+    background:#f8fafc;
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.view-btn{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    padding:9px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.view-btn:hover{
+    background:#1d4ed8;
+}
+
+.grams{
+    background:#e8f5e9;
+    color:#166534;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* =====================================
+   MODAL
+===================================== */
+
+.modal{
+
+    display:none;
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    z-index:9999;
+}
+
+.modal-content{
+
+    width:850px;
+    max-width:100%;
+    max-height:90vh;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    overflow-y:auto;
+
+    position:relative;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+
+    animation:popup .25s ease;
+}
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+.close{
+
+    position:absolute;
+
+    right:18px;
+    top:10px;
+
+    font-size:32px;
+    cursor:pointer;
+
+    color:#777;
+
+    transition:.3s;
+}
+
+.close:hover{
+
+    color:#dc2626;
+}
+
+/* =====================================
+   MODAL TEXT
+===================================== */
+
+.modal-content h2{
+
+    color:#1e293b;
+    margin-bottom:15px;
+}
+
+.modal-content h3{
+
+    margin:18px 0 10px;
+}
+
+.modal-content p{
+
+    line-height:1.7;
+    color:#475569;
+}
+
+/* =====================================
+   ORDER DETAILS TABLE
+===================================== */
+
+.order-table-wrapper{
+
+    width:100%;
+    overflow-x:auto;
+    margin-top:20px;
+}
+
+.order-table{
+
+    width:100%;
+    min-width:650px;
+
+    border-collapse:collapse;
+}
+
+.order-table th{
+
+    background:#1e293b;
+    color:#fff;
+
+    padding:12px;
+
+    text-align:center;
+}
+
+.order-table td{
+
+    padding:12px;
+    border:1px solid #e5e7eb;
+    text-align:center;
+}
+
+.order-table img{
+
+    width:70px;
+    height:70px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+}
+
+.order-table td:nth-child(2){
+
+    text-align:left;
+
+    min-width:180px;
+
+    white-space:normal;
+
+    word-break:break-word;
+}
+
+.order-table td:last-child{
+
+    white-space:nowrap;
+}
+
+/* =====================================
+   GRAND TOTAL
+===================================== */
+
+.modal-content h2:last-child{
+
+    text-align:right;
+
+    margin-top:20px;
+
+    color:#16a34a;
+
+    font-size:28px;
+}
+
+/* =====================================
+   SCROLLBAR
+===================================== */
+
+.modal-content::-webkit-scrollbar{
+
+    width:8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb{
+
+    background:#cbd5e1;
+
+    border-radius:20px;
+}
+
+.order-table-wrapper::-webkit-scrollbar{
+
+    height:8px;
+}
+
+.order-table-wrapper::-webkit-scrollbar-thumb{
+
+    background:#cbd5e1;
+
+    border-radius:20px;
+}
+
+
+
+
+
+
+/* =====================================
+   ORDER DETAILS CARD
+===================================== */
+
+.customer-box{
+    background:#f8fafc;
+    padding:18px;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.customer-box p{
+    margin:8px 0;
+    line-height:1.7;
+}
+
+.grand-total{
+    margin-top:20px;
+    font-size:28px;
+    font-weight:700;
+    color:#16a34a;
+    text-align:right;
+}
+
+.mobile-products{
+    display:none;
+}
+
+.product-card{
+    display:flex;
+    gap:15px;
+    align-items:center;
+    background:#fff;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    margin-bottom:15px;
+}
+
+.product-card img{
+    width:90px;
+    height:90px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.product-info{
+    flex:1;
+}
+
+.product-info h4{
+    margin-bottom:10px;
+}
+
+.product-info p{
+    margin:6px 0;
+}
+
+.price{
+    color:#16a34a;
+    font-size:18px;
+    font-weight:700;
+}
+
+
+
+
+
+/* ==========================================
+   TABLET (768px)
+========================================== */
+
+@media (max-width:768px){
+
+    body{
+        padding:20px;
+    }
+
+    .container{
+        width:100%;
+    }
+
+    .header{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .header h1{
+        font-size:28px;
+    }
+
+    .back-btn{
+        padding:10px 18px;
+        font-size:14px;
+    }
+
+    .table-box{
+        overflow-x:auto;
+    }
+
+    .table-box table{
+        min-width:700px;
+    }
+
+    .table-box thead th,
+    .table-box tbody td{
+        padding:12px 10px;
+        font-size:14px;
+    }
+
+    .view-btn{
+        padding:8px 14px;
+        font-size:13px;
+    }
+
+    /* Modal */
+
+    .modal{
+        padding:15px;
+    }
+
+    .modal-content{
+        width:100%;
+        max-width:700px;
+        max-height:90vh;
+        padding:20px;
+    }
+
+    .modal-content h2{
+        font-size:24px;
+    }
+
+    .modal-content h3{
+        font-size:18px;
+    }
+
+    .modal-content p{
+        font-size:14px;
+    }
+
+    .order-table{
+        min-width:600px;
+    }
+
+    .order-table th,
+    .order-table td{
+        padding:10px;
+        font-size:13px;
+    }
+
+    .order-table img{
+        width:60px;
+        height:60px;
+    }
+
+}
+
+/* ==========================================
+   MOBILE (576px)
+========================================== */
+
+@media (max-width:576px){
+
+    body{
+        padding:10px;
+    }
+
+    .container{
+        width:100%;
+    }
+
+    /* Header */
+
+    .header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .header h1{
+        font-size:24px;
+    }
+
+    .back-btn{
+        width:100%;
+        text-align:center;
+        padding:10px;
+        font-size:14px;
+    }
+
+    /* Orders Table */
+/* 
+    .table-box{
+        overflow-x:auto;
+        border-radius:12px;
+    }
+
+    .table-box table{
+        min-width:650px;
+    }
+
+    .table-box thead th{
+        padding:10px;
+        font-size:13px;
+        white-space:nowrap;
+    }
+
+    .table-box tbody td{
+        padding:10px;
+        font-size:12px;
+        white-space:nowrap;
+    }
+
+    .view-btn{
+        padding:7px 12px;
+        font-size:12px;
+    }
+
+    input[type="checkbox"]{
+        width:18px;
+        height:18px;
+    } */
+
+
+    /* ==========================
+   Orders Table Mobile
+========================== */
+
+.table-box{
+    overflow:hidden;
+}
+
+.table-box table{
+    width:100%;
+    min-width:100%;
+    table-layout:fixed;
+}
+
+.table-box thead th,
+.table-box tbody td{
+    padding:10px 6px;
+    font-size:12px;
+    text-align:center;
+    white-space:normal;
+    word-break:break-word;
+}
+
+/* Hide Date Column */
+
+.table-box th:nth-child(4),
+.table-box td:nth-child(4){
+    display:none;
+}
+
+/* Column Width */
+
+.table-box th:nth-child(1),
+.table-box td:nth-child(1){
+    width:34%;
+    text-align:left;
+}
+
+.table-box th:nth-child(2),
+.table-box td:nth-child(2){
+    width:24%;
+}
+
+.table-box th:nth-child(3),
+.table-box td:nth-child(3){
+    width:28%;
+}
+
+.table-box th:nth-child(5),
+.table-box td:nth-child(5){
+    width:14%;
+}
+
+/* View Button */
+
+.view-btn{
+    width:100%;
+    padding:7px 4px;
+    font-size:11px;
+    border-radius:6px;
+}
+
+/* Checkbox */
+
+input[type="checkbox"]{
+    width:18px;
+    height:18px;
+}
+    /* Modal */
+
+    .modal{
+        padding:8px;
+    }
+
+    .modal-content{
+
+        width:100%;
+        max-width:100%;
+        max-height:95vh;
+
+        padding:15px;
+
+        border-radius:12px;
+    }
+
+    .close{
+
+        top:8px;
+        right:12px;
+        font-size:28px;
+    }
+
+    .modal-content h2{
+        font-size:22px;
+    }
+
+    .modal-content h3{
+        font-size:17px;
+    }
+
+    .modal-content p{
+        font-size:14px;
+        line-height:1.6;
+        word-break:break-word;
+    }
+
+    /* Order Details Table */
+
+    .order-table-wrapper{
+        overflow-x:auto;
+    }
+
+    .order-table{
+        min-width:520px;
+    }
+
+    .order-table th{
+        font-size:12px;
+        padding:8px;
+    }
+
+    .order-table td{
+        font-size:12px;
+        padding:8px;
+    }
+
+    .order-table img{
+        width:50px;
+        height:50px;
+    }
+
+    .modal-content h2:last-child{
+        font-size:22px;
+        text-align:right;
+    }
+
+
+
+
+
+    /* Order Details Cards */
+
+.desktop-table{
+    display:none;
+}
+
+.mobile-products{
+    display:block;
+}
+
+.product-card{
+    flex-direction:row;
+}
+
+.product-card img{
+    width:75px;
+    height:75px;
+}
+
+.grand-total{
+    text-align:center;
+    font-size:22px;
+}
+
+.customer-box{
+    padding:12px;
+}
+
+
+
+
+.desktop-table{
+    display:none;
+}
+
+.mobile-products{
+    display:block;
+}
+
+}
+
+/* ==========================================
+   LARGE DESKTOP (1400px+)
+========================================== */
+
+@media (min-width:1400px){
+
+    .container{
+        max-width:1400px;
+    }
+
+    .modal-content{
+        max-width:900px;
+    }
+
+}
