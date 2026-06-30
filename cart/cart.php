@@ -44,7 +44,7 @@ $total = 0;
         <div class="cart-products">
 
             <?php
-            foreach($_SESSION['cart'] as $item){
+            foreach($_SESSION['cart'] as $cartKey => $item){
 
                 if(empty($item['product_name'])) continue;
 
@@ -66,10 +66,11 @@ $total = 0;
                             <?php echo $item['product_name']; ?>
                         </h3>
 
-                        <a class="delete-btn"
-                           href="remove-cart.php?id=<?php echo $item['id']; ?>">
-                           🗑️
-                        </a>
+                        
+<a class="delete-btn"
+   href="remove-cart.php?id=<?php echo urlencode($cartKey); ?>">
+   🗑️
+</a>
 
                     </div>
 
@@ -88,18 +89,13 @@ $total = 0;
                     </p>
 
                     <div class="qty-box">
-
-                        <a href="decrease.php?id=<?php echo $item['id']; ?>">
-                            -
-                        </a>
+<a href="decrease.php?id=<?php echo urlencode($cartKey); ?>">-</a>
 
                         <span>
                             <?php echo $qty; ?>
                         </span>
 
-                        <a href="increase.php?id=<?php echo $item['id']; ?>">
-                            +
-                        </a>
+                    <a href="increase.php?id=<?php echo urlencode($cartKey); ?>">+</a>
 
                     </div>
 

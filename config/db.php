@@ -1,13 +1,13 @@
- <?php
-
-$host = getenv('DB_HOST');
-$port = getenv('DB_PORT');
-$dbname = getenv('DB_NAME');
-$user = getenv('DB_USER');
-$password = getenv('DB_PASSWORD');
+<?php
+$host = "localhost";
+$port = 3306;
+$dbname = "dadima";
+$user = "root";
+$password = "";
 
 $conn = mysqli_connect($host, $user, $password, $dbname, $port);
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+?>

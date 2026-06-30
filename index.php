@@ -24,14 +24,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </div>
 
 
-   <!-- //navbar -->
+   <!------------------- //navbar--------------------- -->
     
 <?php
 session_start();
 ?>
 
-<!-- Navbar -->
-<!-- Navbar -->
+
 <div class="nav">
 
     <!-- Logo -->
@@ -105,7 +104,7 @@ session_start();
 </div>
 
 
-  <!-- //banner -->
+  <!---------------------- //banner ------------------------------------>
 
 <div  id="home"class="banner">
     
@@ -117,8 +116,8 @@ session_start();
 </div>
 
 
-<!-- card -->
-<!-- Products Section -->
+<!---------------------- card ------------------------------------------>
+
 <div id="card" class="main">
 
 <?php
@@ -172,7 +171,9 @@ while($row = mysqli_fetch_assoc($result))
 
 
 
-<!-- main section -->
+<!-- -------------------main section -------------------------------------->
+
+
 
 <section class="process-section" id="process">
 
@@ -264,7 +265,11 @@ while($row = mysqli_fetch_assoc($result))
     </div>
 
 </section>
-<!-- our story -->
+
+
+
+
+<!------------------------ our story --------------------------------------->
 
 
 <section  id= "ourstory"   class="story-section">
@@ -309,66 +314,10 @@ while($row = mysqli_fetch_assoc($result))
 </section>
 
 
-<!-- review section -->
-<!-- <section class="testimonial">
+<!-----------------------------review section ------------------------------->
 
-    <h2>Client <span>Testimonials</span></h2>
-    <p class="sub-title">
-        What our customers say about our homemade pickles
-    </p>
 
-    <div class="review-container">
 
-        <div class="cardi">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>
-                Jhaji Mango Pickle ka taste bilkul ghar jaisa hai.
-                Pure masale aur authentic flavour ne dil jeet liya.
-            </p>
-
-            <div class="user">
-                <img src="https://i.pravatar.cc/60?img=1">
-                <div>
-                    <h4>Ravi Kumar</h4>
-                    <span>Patna, Bihar</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="cardi">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>
-                Lemon Pickle fresh aur delicious tha.
-                Packaging bhi bahut acchi thi.
-            </p>
-
-            <div class="user">
-                <img src="https://i.pravatar.cc/60?img=2">
-                <div>
-                    <h4>Neha Singh</h4>
-                    <span>Lucknow, UP</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="cardi">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>
-                Mixed Pickle ka flavour outstanding hai.
-                Family ko bahut pasand aaya.
-            </p>
-
-            <div class="user">
-                <img src="https://i.pravatar.cc/60?img=3">
-                <div>
-                    <h4>Amit Verma</h4>
-                    <span>Delhi</span>
-                </div>
-            </div>
-        </div> -->
-
-            <!-- Arrow -->
-    <!-- <button class="next-btn">❯</button> -->
 <section class="testimonial">
 
     <h2>Client <span>Testimonials</span></h2>
@@ -450,60 +399,7 @@ while($row = mysqli_fetch_assoc($result))
 
 
 
-
-<!-- 
-        footer section -->
-
-        <!-- <div class="footer" >
-            <div class="fif">
-              <img src="assets/img/logo.png">
-                <P>Bringing you the most authentic homemade pickles with love and  traditional indian flavors.</P>
-                <div class="a1">
-                    <a href=""><img src="assets/img/facebook.png" alt="Facebook"></a>
-                    <a href=""><img src="assets/img/twitter.png" alt="Twitter"></a>
-                    <a href=""><img src="assets/img/insta.png" alt="Instagram"></a>
-                    <a href=""><img src="assets/img/pintrest.png" alt="Pinterest"></a>
-                </div>
-            </div>
-            <div class="quick">
-                <p><SPAN>QUICK LINKS</SPAN></p>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li> <a href="">About Us</a></li>
-                    <li> <a href="">Our process</a></li>
-                    <li> <a href="">Contact</a></li>
-                </ul>
-                 -->
-                 
-                 
-                  
-                   
-            <!-- </div>
-            <div class="customer">
-                <P><SPAN>CUSTOMER SERVICE</SPAN></P>
-                <ul>
-                    <li><a href="">Shipping Policy</a></li>
-                     <li> <a href="">Return & Refund</a></li>
-                      <li> <a href="">Term & Conditions</a></li>
-                       <li><a href="">FAQs</a></li>
-                        <li> <a href="">Privacy Policy</a></li>
-                </ul>
-                
-               
-               
-                
-               
-            </div>
-            <div class="contact">
-                <P><SPAN>CONTACT US</SPAN></P>
-                <P>Phone no:</P>
-                <p>location:</p>
-               <p>Email:</p>
-            </div>
-        </div> -->
-
-
+<!--------------------------------- footer ------------------------------------>
 
 
 
@@ -617,7 +513,7 @@ while($row = mysqli_fetch_assoc($result))
 
 
 
-
+<!------------------------ java script ------------------------------------>
 
 
         <script>
@@ -643,70 +539,70 @@ while($row = mysqli_fetch_assoc($result))
                 });
             });
             
-//     client testimonials       
+                                   //     client testimonials       
 
-const container = document.querySelector(".review-container");
-const nextBtn = document.getElementById("nextBtn");
-const prevBtn = document.getElementById("prevBtn");
-container.scrollLeft = 0;
-let scrollAmount = 0;
-// const cardWidth = 370; // card + gap
-const cardWidth = document.querySelector(".cardi").offsetWidth + 20;
+            const container = document.querySelector(".review-container");
+            const nextBtn = document.getElementById("nextBtn");
+            const prevBtn = document.getElementById("prevBtn");
+            container.scrollLeft = 0;
+            let scrollAmount = 0;
+            
+            const cardWidth = document.querySelector(".cardi").offsetWidth + 20;
+            
+            prevBtn.style.display = "none"; // start me left hide
+            
+            nextBtn.addEventListener("click", () => {
+                scrollAmount += cardWidth;
 
-prevBtn.style.display = "none"; // start me left hide
+                container.scrollTo({
+                    left: scrollAmount,
+                    behavior: "smooth"
+                });
+            
+                updateArrows();
+            });
+            
+            prevBtn.addEventListener("click", () => {
+                scrollAmount -= cardWidth;
+            
+                if(scrollAmount < 0){
+                    scrollAmount = 0;
+                }
+            
+                           container.scrollTo({
+                    left: scrollAmount,
+                    behavior: "smooth"
+                });
+            
+                updateArrows();
+            });
+            
+            function updateArrows(){
 
-nextBtn.addEventListener("click", () => {
-    scrollAmount += cardWidth;
-
-    container.scrollTo({
-        left: scrollAmount,
-        behavior: "smooth"
-    });
-
-    updateArrows();
-});
-
-prevBtn.addEventListener("click", () => {
-    scrollAmount -= cardWidth;
-
-    if(scrollAmount < 0){
-        scrollAmount = 0;
-    }
-
-    container.scrollTo({
-        left: scrollAmount,
-        behavior: "smooth"
-    });
-
-    updateArrows();
-});
-
-function updateArrows(){
-
-    // Left Arrow
-    if(scrollAmount <= 0){
-        prevBtn.style.display = "none";
-    }else{
-        prevBtn.style.display = "block";
-    }
-
-    // Right Arrow
-    const maxScroll =
-        container.scrollWidth - container.clientWidth;
-
-    if(scrollAmount >= maxScroll){
-        nextBtn.style.display = "none";
-    }else{
-        nextBtn.style.display = "block";
-    }
-}
+                // Left Arrow
+                if(scrollAmount <= 0){
+                    prevBtn.style.display = "none";
+                }else{
+                    prevBtn.style.display = "block";
+                }
+            
+                // Right Arrow
+                           const maxScroll =
+                    container.scrollWidth - container.clientWidth;
+            
+                if(scrollAmount >= maxScroll){
+                    nextBtn.style.display = "none";
+                           }else{
+                    nextBtn.style.display = "block";
+                }
+            }
 
 
 
 
 
                 
-         </script>
+</script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <?php if(isset($_GET['logout']) && $_GET['logout']=="success"){ ?>

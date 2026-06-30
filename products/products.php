@@ -37,10 +37,7 @@ $result = mysqli_query($conn,"SELECT * FROM products");
                     ₹<?php echo $row['price']; ?>
                 </p>
 
-              <a class="cart-btn"
-   href="../cart/cart.php?id=<?php echo $row['id']; ?>">
-   Add To Cart
-</a>
+              <a class="cart-btn" href="../cart/cart.php?id=<?php echo $row['id']; ?>">Add To Cart</a>
 
             </div>
 
