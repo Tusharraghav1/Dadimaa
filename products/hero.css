@@ -1,0 +1,1480 @@
+/*==============================
+        GOOGLE FONT
+===============================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
+
+/*==============================
+        HERO SECTION
+===============================*/
+
+.hero{
+
+    position:relative;
+    width:100%;
+    min-height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #FFFDF5 0%,
+    #FFF6DF 40%,
+    #FFFBEF 100%
+    );
+
+}
+
+/*==============================
+      BACKGROUND GLOW
+===============================*/
+
+.bg-gradient{
+
+    position:absolute;
+
+    width:900px;
+    height:900px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(46,125,50,.20),
+    transparent 70%);
+
+    top:-250px;
+    right:-180px;
+
+    filter:blur(90px);
+
+    z-index:0;
+
+}
+
+.circle-bg{
+
+    position:absolute;
+
+    width:550px;
+    height:550px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,210,100,.45),
+    rgba(255,255,255,0));
+
+    z-index:-1;
+
+}
+
+/*==============================
+      HERO CONTAINER
+===============================*/
+
+.hero-container{
+
+    width:90%;
+    max-width:1400px;
+
+    display:grid;
+
+    grid-template-columns:
+
+    1fr
+    1fr;
+
+    align-items:center;
+
+    gap:60px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==============================
+      LEFT CONTENT
+===============================*/
+
+.hero-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+/*==============================
+      BADGE
+===============================*/
+
+.badge{
+
+    width:fit-content;
+
+    padding:10px 22px;
+
+    background:#E8F5E9;
+
+    color:#2E7D32;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:30px;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.05);
+
+}
+
+/*==============================
+      SMALL TITLE
+===============================*/
+
+.hero-content h4{
+
+    font-size:40px;
+
+    color:#406B31;
+
+    font-family:
+    "Playfair Display",serif;
+
+    margin-bottom:8px;
+
+}
+
+/*==============================
+      BIG TITLE
+===============================*/
+
+.hero-content h1{
+
+    font-size:90px;
+
+    line-height:90px;
+
+    color:#1B5E20;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+/*==============================
+      PARAGRAPH
+===============================*/
+
+.hero-content p{
+
+    font-size:19px;
+
+    line-height:34px;
+
+    color:#555;
+
+    max-width:520px;
+
+    margin-bottom:40px;
+
+}
+
+/*==============================
+      BUTTON AREA
+===============================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+}
+
+/*==============================
+      PRIMARY BUTTON
+===============================*/
+
+.btn-primary{
+
+    padding:18px 40px;
+
+    background:#1B5E20;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:60px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 18px 35px rgba(27,94,32,.25);
+
+}
+
+.btn-primary:hover{
+
+    transform:
+    translateY(-6px);
+
+    background:#2E7D32;
+
+}
+
+/*==============================
+      SECOND BUTTON
+===============================*/
+
+.btn-secondary{
+
+    padding:18px 40px;
+
+    border:2px solid #1B5E20;
+
+    color:#1B5E20;
+
+    border-radius:60px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn-secondary:hover{
+
+    background:#1B5E20;
+
+    color:#fff;
+
+    transform:
+    translateY(-6px);
+
+}
+
+/*==============================
+      FEATURES
+===============================*/
+
+.hero-features{
+
+    display:flex;
+
+    gap:40px;
+
+    margin-top:55px;
+
+}
+
+.feature{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    gap:10px;
+
+    color:#2E7D32;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.feature span{
+
+    color:#444;
+
+}
+
+/*==============================
+      RIGHT IMAGE
+===============================*/
+
+.hero-image{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.jar{
+
+    width:480px;
+
+    max-width:100%;
+
+    position:relative;
+
+    z-index:3;
+
+    filter:
+
+    drop-shadow(
+    0 45px 55px
+    rgba(0,0,0,.22));
+
+}
+
+/*==============================
+      SCROLL ICON
+===============================*/
+
+.scroll-down{
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.scroll-down span{
+
+    width:36px;
+
+    height:60px;
+
+    display:block;
+
+    border:2px solid #1B5E20;
+
+    border-radius:50px;
+
+    position:relative;
+
+}
+
+.scroll-down span::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:#1B5E20;
+
+    left:50%;
+
+    top:12px;
+
+    transform:translateX(-50%);
+
+}
+/*=================================================
+        FLOATING DECORATION IMAGES
+==================================================*/
+
+.leaf,
+.garlic,
+.chilli,
+.mustard,
+.spark{
+
+    position:absolute;
+    user-select:none;
+    pointer-events:none;
+    z-index:5;
+
+}
+
+/*==============================
+        LEAF 1
+===============================*/
+
+.leaf1{
+
+    width:130px;
+
+    top:8%;
+    left:3%;
+
+    animation:
+    floatLeaf1 6s ease-in-out infinite;
+
+}
+
+/*==============================
+        LEAF 2
+===============================*/
+
+.leaf2{
+
+    width:140px;
+
+    bottom:12%;
+    left:42%;
+
+    animation:
+    floatLeaf2 7s ease-in-out infinite;
+
+}
+
+/*==============================
+        GARLIC
+===============================*/
+
+.garlic{
+
+    width:90px;
+
+    right:12%;
+    bottom:18%;
+
+    animation:
+    garlicFloat 5s ease-in-out infinite;
+
+}
+
+/*==============================
+        CHILLI
+===============================*/
+
+.chilli{
+
+    width:100px;
+
+    top:20%;
+    right:10%;
+
+    transform:rotate(-20deg);
+
+    animation:
+    chilliFloat 5s ease-in-out infinite;
+
+}
+
+/*==============================
+      MUSTARD PARTICLES
+===============================*/
+
+.mustard{
+
+    width:70px;
+    opacity:.85;
+
+}
+
+.mustard1{
+
+    top:12%;
+    right:36%;
+
+    animation:
+    mustard1 10s linear infinite;
+
+}
+
+.mustard2{
+
+    top:45%;
+    right:20%;
+
+    animation:
+    mustard2 8s linear infinite;
+
+}
+
+.mustard3{
+
+    bottom:12%;
+    left:58%;
+
+    animation:
+    mustard3 12s linear infinite;
+
+}
+
+/*==============================
+        SPARKLES
+===============================*/
+
+.spark{
+
+    width:45px;
+
+}
+
+.sparkle1{
+
+    top:18%;
+    left:50%;
+
+    animation:
+    sparkle 2s infinite;
+
+}
+
+.sparkle2{
+
+    top:60%;
+    right:28%;
+
+    animation:
+    sparkle 2.5s infinite;
+
+}
+
+.sparkle3{
+
+    bottom:18%;
+    left:28%;
+
+    animation:
+    sparkle 3s infinite;
+
+}
+
+/*=================================================
+              JAR FLOAT
+==================================================*/
+
+.jar{
+
+    animation:
+    jarFloat 4s ease-in-out infinite;
+
+}
+
+/*=================================================
+            LEAF ANIMATION
+==================================================*/
+
+@keyframes floatLeaf1{
+
+0%{
+
+transform:
+translateY(0)
+rotate(0deg);
+
+}
+
+25%{
+
+transform:
+translateY(-15px)
+rotate(-8deg);
+
+}
+
+50%{
+
+transform:
+translateY(0)
+rotate(5deg);
+
+}
+
+75%{
+
+transform:
+translateY(15px)
+rotate(-5deg);
+
+}
+
+100%{
+
+transform:
+translateY(0)
+rotate(0);
+
+}
+
+}
+
+@keyframes floatLeaf2{
+
+0%{
+
+transform:
+translateY(0)
+rotate(0);
+
+}
+
+50%{
+
+transform:
+translateY(-18px)
+rotate(12deg);
+
+}
+
+100%{
+
+transform:
+translateY(0)
+rotate(0);
+
+}
+
+}
+
+/*=================================================
+            GARLIC
+==================================================*/
+
+@keyframes garlicFloat{
+
+0%{
+
+transform:
+translateY(0);
+
+}
+
+50%{
+
+transform:
+translateY(-12px)
+rotate(8deg);
+
+}
+
+100%{
+
+transform:
+translateY(0);
+
+}
+
+}
+
+/*=================================================
+            CHILLI
+==================================================*/
+
+@keyframes chilliFloat{
+
+0%{
+
+transform:
+translateY(0)
+rotate(-20deg);
+
+}
+
+50%{
+
+transform:
+translateY(-15px)
+rotate(-10deg);
+
+}
+
+100%{
+
+transform:
+translateY(0)
+rotate(-20deg);
+
+}
+
+}
+
+/*=================================================
+            JAR
+==================================================*/
+
+@keyframes jarFloat{
+
+0%{
+
+transform:
+translateY(0);
+
+}
+
+50%{
+
+transform:
+translateY(-18px);
+
+}
+
+100%{
+
+transform:
+translateY(0);
+
+}
+
+}
+
+/*=================================================
+            MUSTARD PARTICLES
+==================================================*/
+
+@keyframes mustard1{
+
+0%{
+
+transform:
+translate(0,0)
+scale(1);
+
+opacity:.3;
+
+}
+
+50%{
+
+transform:
+translate(-20px,40px)
+scale(1.2);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translate(0,80px)
+scale(.8);
+
+opacity:.2;
+
+}
+
+}
+
+@keyframes mustard2{
+
+0%{
+
+transform:
+translate(0,0);
+
+}
+
+50%{
+
+transform:
+translate(25px,-40px);
+
+}
+
+100%{
+
+transform:
+translate(0,-80px);
+
+}
+
+}
+
+@keyframes mustard3{
+
+0%{
+
+transform:
+translate(0,0);
+
+}
+
+50%{
+
+transform:
+translate(-40px,-30px);
+
+}
+
+100%{
+
+transform:
+translate(0,-70px);
+
+}
+
+}
+
+/*=================================================
+            SPARKLE
+==================================================*/
+
+@keyframes sparkle{
+
+0%{
+
+opacity:.2;
+
+transform:
+scale(.5)
+rotate(0);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:
+scale(1.3)
+rotate(180deg);
+
+}
+
+100%{
+
+opacity:.2;
+
+transform:
+scale(.5)
+rotate(360deg);
+
+}
+
+}
+
+/*=================================================
+            BUTTON HOVER
+==================================================*/
+
+.btn-primary:hover{
+
+box-shadow:
+0 25px 45px rgba(27,94,32,.35);
+
+}
+
+.btn-secondary:hover{
+
+box-shadow:
+0 25px 45px rgba(27,94,32,.20);
+
+}
+
+/*=================================================
+            IMAGE HOVER
+==================================================*/
+
+.hero:hover .jar{
+
+filter:
+drop-shadow(0 50px 70px rgba(0,0,0,.25));
+
+transition:.5s;
+
+}
+
+.hero:hover .leaf{
+
+filter:
+drop-shadow(0 10px 20px rgba(0,0,0,.15));
+
+}
+
+
+
+/*=========================================
+            LARGE DESKTOP
+=========================================*/
+
+@media(max-width:1400px){
+
+.hero-container{
+
+    gap:40px;
+
+}
+
+.hero-content h1{
+
+    font-size:78px;
+    line-height:82px;
+
+}
+
+.hero-content h4{
+
+    font-size:34px;
+
+}
+
+.jar{
+
+    width:430px;
+
+}
+
+}
+
+
+
+/*=========================================
+            LAPTOP
+=========================================*/
+
+@media(max-width:1200px){
+
+.hero{
+
+    padding:120px 0 80px;
+
+}
+
+.hero-container{
+
+    width:92%;
+
+    gap:30px;
+
+}
+
+.hero-content h1{
+
+    font-size:68px;
+    line-height:72px;
+
+}
+
+.hero-content h4{
+
+    font-size:30px;
+
+}
+
+.hero-content p{
+
+    font-size:17px;
+    line-height:30px;
+
+}
+
+.jar{
+
+    width:390px;
+
+}
+
+.leaf1{
+
+    width:100px;
+
+}
+
+.leaf2{
+
+    width:110px;
+
+}
+
+.chilli{
+
+    width:80px;
+
+}
+
+.garlic{
+
+    width:70px;
+
+}
+
+.mustard{
+
+    width:50px;
+
+}
+
+.spark{
+
+    width:35px;
+
+}
+
+}
+
+
+
+/*=========================================
+            TABLET
+=========================================*/
+
+@media(max-width:992px){
+
+.hero{
+
+    padding:120px 0 80px;
+
+}
+
+.hero-container{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    align-items:center;
+
+    order:2;
+
+}
+
+.hero-image{
+
+    order:1;
+
+}
+
+.hero-content p{
+
+    max-width:650px;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-features{
+
+    justify-content:center;
+
+}
+
+.jar{
+
+    width:370px;
+
+}
+
+.circle-bg{
+
+    width:420px;
+    height:420px;
+
+}
+
+.leaf1{
+
+    left:5%;
+    top:5%;
+
+}
+
+.leaf2{
+
+    right:5%;
+    left:auto;
+    bottom:10%;
+
+}
+
+.chilli{
+
+    top:12%;
+    right:10%;
+
+}
+
+.garlic{
+
+    bottom:8%;
+    right:12%;
+
+}
+
+}
+
+
+
+/*=========================================
+            MOBILE LANDSCAPE
+=========================================*/
+
+@media(max-width:768px){
+
+.hero{
+
+    min-height:auto;
+
+    padding:100px 0 60px;
+
+}
+
+.hero-container{
+
+    width:94%;
+
+    gap:20px;
+
+}
+
+.badge{
+
+    font-size:13px;
+
+    padding:8px 18px;
+
+}
+
+.hero-content h4{
+
+    font-size:26px;
+
+}
+
+.hero-content h1{
+
+    font-size:52px;
+
+    line-height:58px;
+
+}
+
+.hero-content p{
+
+    font-size:16px;
+
+    line-height:28px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    width:100%;
+
+    gap:15px;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+    width:100%;
+
+    max-width:280px;
+
+    text-align:center;
+
+}
+
+.hero-features{
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+.jar{
+
+    width:300px;
+
+}
+
+.circle-bg{
+
+    width:340px;
+    height:340px;
+
+}
+
+.leaf1{
+
+    width:75px;
+
+}
+
+.leaf2{
+
+    width:85px;
+
+}
+
+.garlic{
+
+    width:60px;
+
+}
+
+.chilli{
+
+    width:70px;
+
+}
+
+.mustard{
+
+    width:35px;
+
+}
+
+.spark{
+
+    width:28px;
+
+}
+
+.scroll-down{
+
+    display:none;
+
+}
+
+}
+
+
+
+/*=========================================
+            MOBILE
+=========================================*/
+
+@media(max-width:576px){
+
+.hero{
+
+    padding:90px 0 50px;
+
+}
+
+.hero-container{
+
+    width:95%;
+
+}
+
+.hero-content h4{
+
+    font-size:22px;
+
+}
+
+.hero-content h1{
+
+    font-size:42px;
+
+    line-height:48px;
+
+}
+
+.hero-content p{
+
+    font-size:15px;
+
+    line-height:26px;
+
+}
+
+.badge{
+
+    font-size:12px;
+
+}
+
+.jar{
+
+    width:240px;
+
+}
+
+.circle-bg{
+
+    width:260px;
+    height:260px;
+
+}
+
+.hero-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    width:100%;
+
+    gap:15px;
+
+}
+
+.feature{
+
+    font-size:13px;
+
+}
+
+.feature span{
+
+    font-size:12px;
+
+}
+
+.leaf1{
+
+    width:55px;
+
+    top:3%;
+    left:3%;
+
+}
+
+.leaf2{
+
+    width:65px;
+
+    right:3%;
+    bottom:15%;
+
+}
+
+.chilli{
+
+    width:50px;
+
+    top:14%;
+    right:5%;
+
+}
+
+.garlic{
+
+    width:45px;
+
+    bottom:12%;
+    right:8%;
+
+}
+
+.mustard{
+
+    width:25px;
+
+}
+
+.spark{
+
+    width:18px;
+
+}
+
+.bg-gradient{
+
+    width:450px;
+    height:450px;
+
+}
+
+}
+
+
+
+/*=========================================
+            EXTRA SMALL DEVICES
+=========================================*/
+
+@media(max-width:400px){
+
+.hero-content h1{
+
+    font-size:34px;
+
+    line-height:40px;
+
+}
+
+.hero-content h4{
+
+    font-size:18px;
+
+}
+
+.hero-content p{
+
+    font-size:14px;
+
+}
+
+.jar{
+
+    width:200px;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+    font-size:14px;
+
+    padding:15px 25px;
+
+}
+
+.hero-features{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+}
+
+.feature{
+
+    flex-direction:row;
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+}

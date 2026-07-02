@@ -1,92 +1,155 @@
 <?php
-if(session_status() === PHP_SESSION_NONE){
+if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
 include '../config/db.php';
+include '../config/mail.php';
 
 $message = "";
 
-if(isset($_POST['register'])){
+if (isset($_POST['register'])) {
 
-    $name = mysqli_real_escape_string($conn,$_POST['name']);
-    $email = mysqli_real_escape_string($conn,$_POST['email']);
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $name = trim(mysqli_real_escape_string($conn, $_POST['name']));
+    $email = strtolower(trim(mysqli_real_escape_string($conn, $_POST['email'])));
+    $plainPassword = $_POST['password'];
 
-    $check = mysqli_query($conn,"SELECT * FROM users WHERE email='$email'");
+    // Basic Validation
+    if (empty($name) || empty($email) || empty($plainPassword)) {
 
-    if(mysqli_num_rows($check) > 0){
+        $message = "All fields are required.";
 
-        $message = "Email already exists!";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
-    }else{
+        $message = "Invalid email address.";
 
-        $sql = "INSERT INTO users(name,email,password)
-                VALUES('$name','$email','$password')";
+    } elseif (strlen($plainPassword) < 8) {
 
-        if(mysqli_query($conn,$sql)){
+        $message = "Password must be at least 8 characters.";
 
-    $user_id = mysqli_insert_id($conn);
+    } else {
 
-    $_SESSION['user_id'] = $user_id;
-    $_SESSION['user_name'] = $name;
+        // Check existing email
+        $check = mysqli_query($conn, "SELECT id FROM users WHERE email='$email'");
 
-  header("Location: ../index.php");
-    exit();
+        if (mysqli_num_rows($check) > 0) {
 
-}else{
+            $message = "Email already exists.";
 
-            $message = "Registration Failed!";
+        } else {
+
+            $password = password_hash($plainPassword, PASSWORD_DEFAULT);
+
+            // Generate OTP
+            $otp = rand(100000, 999999);
+
+            $expiry = date("Y-m-d H:i:s", strtotime("+10 minutes"));
+
+            // Insert User
+            $sql = "INSERT INTO users
+                    (name,email,password,otp,otp_expiry,is_verified)
+                    VALUES
+                    ('$name','$email','$password','$otp','$expiry',0)";
+
+            if (mysqli_query($conn, $sql)) {
+
+                // Send OTP Email
+                if (sendOTP($email, $otp) === true) {
+
+                    $_SESSION['verify_email'] = $email;
+
+                    header("Location: verify_signup_otp.php");
+                    exit();
+
+                } else {
+
+                    // Delete user if mail failed
+                    mysqli_query($conn, "DELETE FROM users WHERE email='$email'");
+
+                    $message = "Failed to send OTP. Please try again.";
+
+                }
+
+            } else {
+
+                $message = "Registration failed.";
+
+            }
 
         }
+
     }
+
 }
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Register</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/auth.css">
+
 </head>
+
 <body>
+   <a href="../index.php" class="back-btn">← Back</a> 
 
 <div class="container">
 
-    <h2>Register</h2>
+    <h2>Create Account</h2>
 
-    <?php if(!empty($message)){ ?>
-        <p class="message"><?php echo $message; ?></p>
+    <?php if (!empty($message)) { ?>
+    <p class="message"><?php echo $message; ?></p>
     <?php } ?>
 
-   <form method="POST" autocomplete="off">
+  <form method="POST" autocomplete="off">
 
-    <input type="text"
-           name="name"
-           placeholder="Name"
-           autocomplete="off"
-           required>
+    <!-- Chrome Autofill Trick -->
+    <input type="text" name="fakeuser" autocomplete="username" style="display:none;">
+    <input type="password" name="fakepass" autocomplete="new-password" style="display:none;">
 
-    <input type="email"
-           name="email"
-           placeholder="Email"
-           autocomplete="off"
-           required>
+    <input
+        type="text"
+        name="name"
+        placeholder="Full Name"
+        autocomplete="name"
+        spellcheck="false"
+        required>
 
-    <input type="password"
-           name="password"
-           placeholder="Password"
-           autocomplete="new-password"
-           required>
+    <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        autocomplete="email"
+        spellcheck="false"
+        required>
 
-    <button type="submit" name="register">
-        Register
+    <input
+        type="password"
+        name="password"
+        placeholder="Create Password"
+        autocomplete="new-password"
+        required>
+
+    <button
+        type="submit"
+        name="register">
+
+        Create Account
+
     </button>
 
 </form>
 
     <p>
-        <a href="login.php">Login Here</a>
+
+        Already have an account?
+
+        <a href="login.php">Login</a>
+
     </p>
 
 </div>

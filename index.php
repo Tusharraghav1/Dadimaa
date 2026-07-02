@@ -4,11 +4,13 @@ include 'config/db.php';
 ?>
 <html lang="en">
 <head>
+    <link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="hero.css">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -106,15 +108,125 @@ session_start();
 
   <!---------------------- //banner ------------------------------------>
 
-<div  id="home"class="banner">
-    
-   
-</div>
+<section class="hero">
+
+    <!-- Background Decorations -->
+
+    <div class="bg-gradient"></div>
+
+    <!-- Floating Assets -->
+
+    <img src="assets/img/leaf1.png" class="leaf leaf1" alt="">
+    <img src="assets/img/leaf2.png" class="leaf leaf2" alt="">
+
+    <img src="assets/img/garlic1.png" class="garlic" alt="">
+    <img src="assets/img/chilli.png" class="chilli" alt="">
+
+    <img src="assets/img/mustard.png" class="mustard mustard1" alt="">
+    <img src="assets/img/mustard.png" class="mustard mustard2" alt="">
+    <img src="assets/img/mustard.png" class="mustard mustard3" alt="">
+
+    <img src="assets/img/sparkle.png" class="spark sparkle1" alt="">
+    <img src="assets/img/sparkle.png" class="spark sparkle2" alt="">
+    <img src="assets/img/sparkle.png" class="spark sparkle3" alt="">
+
+    <div class="hero-container">
+
+        <!-- LEFT -->
+
+        <div class="hero-content">
+
+            <span class="badge">
+                🌿 100% Homemade • Traditional Recipe
+            </span>
+
+            <h4>
+                Authentic Homemade
+            </h4>
+
+            <h1>
+                PICKLES
+            </h1>
+
+            <p>
+                Traditional Taste, Made with Love.<br>
+                Fresh ingredients, Grandma's recipes & handcrafted perfection.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="shop.php" class="btn-primary">
+                    Shop Now →
+                </a>
+
+                <a href="#process" class="btn-secondary">
+                    Our Process
+                </a>
+
+            </div>
+
+            <div class="hero-features">
+
+                <div class="feature">
+                    🌿
+                    <span>100% Natural</span>
+                </div>
+
+                <div class="feature">
+                    🧄
+                    <span>No Preservatives</span>
+                </div>
+
+                <div class="feature">
+                    ❤️
+                    <span>Made With Love</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="hero-image">
+
+            <div class="circle-bg"></div>
+
+            <img src="assets/img/hero-jar.png"
+                 class="jar"
+                 alt="Pickle Jar">
+
+        </div>
+
+    </div>
+
+    <!-- Scroll -->
+
+    <!-- <div class="scroll-down">
+
+        <span></span>
+
+    </div> -->
+
+</section>
+
+
+<!-- GSAP -->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="hero.js"></script>
+
+
+
+
+
+<!-------------------- popular pickle ---------------->
+
 
 <div class="popular">
     <p> OUR POPULAR PICKLES</p>
 </div>
-
 
 <!---------------------- card ------------------------------------------>
 
@@ -171,8 +283,12 @@ while($row = mysqli_fetch_assoc($result))
 
 
 
-<!-- -------------------main section -------------------------------------->
 
+
+
+
+
+<!-- -------------------main section -------------------------------------->
 
 
 <section class="process-section" id="process">
@@ -184,9 +300,9 @@ while($row = mysqli_fetch_assoc($result))
 
     <div class="process-container">
 
-        <!-- Step 1 -->
         <div class="process-card">
-            <div class="step-number">01</div>
+
+            <span class="step-number">01</span>
 
             <div class="process-image">
                 <img src="assets/img/fresh.png" alt="">
@@ -200,13 +316,12 @@ while($row = mysqli_fetch_assoc($result))
                 We carefully select the freshest fruits &
                 spices to ensure the best quality in every bite.
             </p>
+
         </div>
 
-        <div class="arrow1">➜</div>
-
-        <!-- Step 2 -->
         <div class="process-card">
-            <div class="step-number">02</div>
+
+            <span class="step-number">02</span>
 
             <div class="process-image">
                 <img src="assets/img/preparation.png" alt="">
@@ -220,13 +335,12 @@ while($row = mysqli_fetch_assoc($result))
                 Prepared using age-old recipes and
                 traditional methods passed through generations.
             </p>
+
         </div>
 
-        <div class="arrow1">➜</div>
-
-        <!-- Step 3 -->
         <div class="process-card">
-            <div class="step-number">03</div>
+
+            <span class="step-number">03</span>
 
             <div class="process-image">
                 <img src="assets/img/jar.png" alt="">
@@ -240,13 +354,12 @@ while($row = mysqli_fetch_assoc($result))
                 No chemicals. No shortcuts.
                 Only natural ingredients and sun-kissed goodness.
             </p>
+
         </div>
 
-        <div class="arrow1">➜</div>
-
-        <!-- Step 4 -->
         <div class="process-card">
-            <div class="step-number">04</div>
+
+            <span class="step-number">04</span>
 
             <div class="process-image">
                 <img src="assets/img/delivery.png" alt="">
@@ -260,13 +373,12 @@ while($row = mysqli_fetch_assoc($result))
                 Packed with care and delivered fresh
                 to your doorstep with love.
             </p>
+
         </div>
 
     </div>
 
 </section>
-
-
 
 
 <!------------------------ our story --------------------------------------->
@@ -601,6 +713,13 @@ while($row = mysqli_fetch_assoc($result))
 
 
 
+
+// for dropdown
+
+
+
+
+
                 
 </script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -617,7 +736,7 @@ Swal.fire({
 </script>
 <?php } ?>
      
-         
+        
     
         
 
