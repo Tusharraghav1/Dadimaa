@@ -1,0 +1,761 @@
+/* ===========================
+   Global
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins", Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#f8f3df,#f5f5f5);
+    padding:30px;
+}
+
+/* ===========================
+   OTP Card
+=========================== */
+
+.container{
+    width:100%;
+    max-width:620px;
+    background:#fff;
+    padding:60px 55px;
+    border-radius:22px;
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+/* Heading */
+
+.container h2{
+    font-size:42px;
+    color:#14532d;
+    margin-bottom:18px;
+    font-weight:700;
+}
+
+/* Text */
+
+.container p{
+    font-size:20px;
+    color:#555;
+    margin-bottom:10px;
+}
+
+.container b{
+    display:block;
+    font-size:20px;
+    color:#222;
+    margin-bottom:30px;
+    word-break:break-word;
+}
+
+/* Input */
+
+.container input{
+    width:100%;
+    height:68px;
+    border:2px solid #ddd;
+    border-radius:12px;
+    padding:0 20px;
+    font-size:20px;
+    outline:none;
+    transition:.3s;
+    margin-bottom:25px;
+}
+
+.container input:focus{
+    border-color:#14532d;
+    box-shadow:0 0 0 4px rgba(20,83,45,.15);
+}
+
+/* Button */
+
+.container button{
+    width:100%;
+    height:68px;
+    border:none;
+    border-radius:12px;
+    background:#14532d;
+    color:#fff;
+    font-size:21px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.container button:hover{
+    background:#0f3f22;
+}
+
+/* Success Message */
+
+.message{
+    background:#e8f5e9;
+    color:#14532d;
+    padding:14px;
+    border-radius:10px;
+    font-size:17px;
+    margin-bottom:25px;
+}
+
+/* Link */
+
+.container a{
+    display:inline-block;
+    margin-top:25px;
+    font-size:18px;
+    font-weight:600;
+    text-decoration:none;
+    color:#14532d;
+}
+
+.container a:hover{
+    color:#198754;
+}
+
+
+@media (max-width:480px){
+
+body{
+    margin:0;
+    padding:15px;
+    background:linear-gradient(135deg,#f8f3df,#f5f5f5);
+}
+
+/* Container */
+
+.container{
+
+    position:relative;
+
+    width:100%;
+    max-width:100%;
+
+    min-height:auto;
+
+    padding:90px 25px 35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.10);
+}
+
+/* Heading */
+
+.container h2{
+    font-size:34px;
+    text-align:center;
+    margin-bottom:20px;
+    color:#14532d;
+}
+
+.container p,
+.container b{
+    font-size:17px;
+    text-align:center;
+    display:block;
+}
+
+.container b{
+    margin-bottom:25px;
+    word-break:break-word;
+}
+
+/* Input */
+
+.container input{
+    width:100%;
+    height:58px;
+    padding:0 18px;
+    font-size:18px;
+    border-radius:12px;
+}
+
+/* Button */
+
+.container button{
+    width:100%;
+    height:58px;
+    font-size:19px;
+    border-radius:12px;
+    margin-top:18px;
+}
+
+/* Resend */
+
+.container>a:last-child{
+    display:block;
+    margin-top:22px;
+    text-align:center;
+    font-size:17px;
+    color:#14532d;
+    font-weight:600;
+}
+
+/*==========================
+      Back Button
+==========================*/
+
+.back-btn{
+
+    position:absolute;
+
+    top:20px;
+    left:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:145px;
+    height:50px;
+
+    background:#14532d;
+    color:#fff !important;
+
+    text-decoration:none !important;
+
+    font-size:20px;
+    font-weight:600;
+
+    border-radius:12px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#0f3d22;
+}
+
+}
+
+
+/*==========================================
+        MOBILE (481px - 576px)
+==========================================*/
+
+@media (min-width:481px) and (max-width:576px){
+
+body{
+    margin:0;
+    padding:20px;
+    display:block;
+    background:linear-gradient(135deg,#f8f3df,#f5f5f5);
+}
+
+/* Back Button */
+
+.back-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    width:160px;
+    height:58px;
+
+    background:#14532d;
+    color:#fff !important;
+    text-decoration:none !important;
+
+    font-size:24px;
+    font-weight:700;
+
+    border-radius:15px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#0f3d22;
+}
+
+/* Card */
+
+.container{
+
+    width:100%;
+    max-width:100%;
+
+    margin:0;
+
+    padding:45px 30px;
+
+    border-radius:25px;
+
+    background:#fff;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+/* Heading */
+
+.container h2{
+
+    font-size:34px;
+
+    text-align:center;
+
+    color:#14532d;
+
+    margin-bottom:18px;
+}
+
+.container p{
+
+    text-align:center;
+
+    font-size:18px;
+
+    color:#666;
+
+    margin-bottom:10px;
+}
+
+.container b{
+
+    display:block;
+
+    text-align:center;
+
+    font-size:20px;
+
+    margin-bottom:28px;
+
+    word-break:break-word;
+}
+
+/* OTP */
+
+.container input{
+
+    width:100%;
+
+    height:60px;
+
+    padding:0 18px;
+
+    font-size:18px;
+
+    border:1px solid #ddd;
+
+    border-radius:14px;
+
+    margin-bottom:22px;
+}
+
+/* Button */
+
+.container button{
+
+    width:100%;
+
+    height:60px;
+
+    background:#14532d;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.container button:hover{
+
+    background:#0f3d22;
+}
+
+/* Resend */
+
+.container>a:last-child{
+
+    display:block;
+
+    text-align:center;
+
+    margin-top:25px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:#14532d;
+
+    text-decoration:none;
+}
+
+.container>a:last-child:hover{
+
+    text-decoration:underline;
+}
+
+/* Error Message */
+
+.message{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    font-size:17px;
+
+    color:red;
+}
+
+}
+
+/* Tablet */
+/*==========================================
+        TABLET (577px - 768px)
+==========================================*/
+
+@media (min-width:577px) and (max-width:768px){
+
+body{
+    margin:0;
+    padding:30px;
+    display:block;
+    background:linear-gradient(135deg,#f8f3df,#f5f5f5);
+}
+
+/* Back Button */
+
+.back-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    width:180px;
+    height:60px;
+
+    background:#14532d;
+    color:#fff !important;
+    text-decoration:none !important;
+
+    font-size:24px;
+    font-weight:700;
+
+    border-radius:15px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 12px 28px rgba(0,0,0,.18);
+
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#0f3d22;
+    transform:translateY(-2px);
+}
+
+/* Card */
+
+.container{
+
+    width:100%;
+    max-width:700px;
+
+    margin:0 auto;
+
+    padding:50px 45px;
+
+    background:#fff;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+/* Heading */
+
+.container h2{
+
+    font-size:42px;
+
+    text-align:center;
+
+    color:#14532d;
+
+    margin-bottom:18px;
+}
+
+.container p{
+
+    text-align:center;
+
+    font-size:20px;
+
+    color:#666;
+
+    margin-bottom:10px;
+}
+
+.container b{
+
+    display:block;
+
+    text-align:center;
+
+    font-size:22px;
+
+    margin-bottom:30px;
+
+    word-break:break-word;
+}
+
+/* Message */
+
+.message{
+
+    text-align:center;
+
+    color:red;
+
+    font-size:18px;
+
+    margin-bottom:20px;
+}
+
+/* OTP */
+
+.container input{
+
+    width:100%;
+
+    height:65px;
+
+    padding:0 20px;
+
+    font-size:20px;
+
+    border:1px solid #ddd;
+
+    border-radius:15px;
+
+    margin-bottom:25px;
+}
+
+/* Button */
+
+.container button{
+
+    width:100%;
+
+    height:65px;
+
+    background:#14532d;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:15px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.container button:hover{
+
+    background:#0f3d22;
+}
+
+/* Resend */
+
+.container > a:last-child{
+
+    display:block;
+
+    text-align:center;
+
+    margin-top:30px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:#14532d;
+
+    text-decoration:none;
+}
+
+.container > a:last-child:hover{
+
+    text-decoration:underline;
+}
+
+}
+
+
+/*==========================================
+        SMALL LAPTOP (769px - 991px)
+==========================================*/
+
+@media (min-width:769px) and (max-width:991px){
+
+body{
+    margin:0;
+    padding:40px;
+    display:block;
+    background:linear-gradient(135deg,#f8f3df,#f5f5f5);
+}
+
+/* Back Button */
+
+.back-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    width:190px;
+    height:60px;
+
+    background:#14532d;
+    color:#fff !important;
+    text-decoration:none !important;
+
+    font-size:24px;
+    font-weight:700;
+
+    border-radius:15px;
+
+    margin-bottom:35px;
+
+    box-shadow:0 12px 28px rgba(0,0,0,.18);
+
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#0f3d22;
+    transform:translateY(-2px);
+}
+
+/* Card */
+
+.container{
+    width:100%;
+    max-width:760px;
+    margin:0 auto;
+
+    padding:55px 50px;
+
+    background:#fff;
+
+    border-radius:25px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
+}
+
+/* Heading */
+
+.container h2{
+    font-size:44px;
+    text-align:center;
+    color:#14532d;
+    margin-bottom:18px;
+}
+
+.container p{
+    text-align:center;
+    font-size:21px;
+    color:#666;
+    margin-bottom:10px;
+}
+
+.container b{
+    display:block;
+    text-align:center;
+    font-size:23px;
+    margin-bottom:35px;
+    word-break:break-word;
+}
+
+/* Error */
+
+.message{
+    text-align:center;
+    color:#dc3545;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+/* Input */
+
+.container input{
+    width:100%;
+    height:68px;
+    padding:0 22px;
+    border:1px solid #ddd;
+    border-radius:15px;
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+/* Button */
+
+.container button{
+    width:100%;
+    height:68px;
+    background:#14532d;
+    color:#fff;
+    border:none;
+    border-radius:15px;
+    font-size:23px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.container button:hover{
+    background:#0f3d22;
+}
+
+/* Resend OTP */
+
+.container > a:last-child{
+    display:block;
+    text-align:center;
+    margin-top:30px;
+    font-size:20px;
+    font-weight:600;
+    color:#14532d;
+    text-decoration:none;
+}
+
+.container > a:last-child:hover{
+    text-decoration:underline;
+}
+
+}

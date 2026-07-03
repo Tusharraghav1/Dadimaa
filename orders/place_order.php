@@ -163,53 +163,69 @@ unset($_SESSION['cart']);
 <!DOCTYPE html>
 <html>
 <head>
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Order Success</title>
 
     <style>
 
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        font-family:Arial,sans-serif;
-    }
+   *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",Arial,sans-serif;
+}
 
-    body{
-        background:#f4f4f4;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        height:100vh;
-    }
+body{
+    background:#f4f6f8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
 
-    .success-box{
-        background:#fff;
-        padding:40px;
-        border-radius:15px;
-        text-align:center;
-        box-shadow:0 5px 20px rgba(0,0,0,.1);
-        width:450px;
-    }
+.success-box{
+    background:#fff;
+    width:100%;
+    max-width:650px;
+    padding:60px 50px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
 
-    .success-box
-        color:green;
-        margin-bottom:15px;
-    }
+.success-box h2{
+    color:#198754;
+    font-size:42px;
+    margin-bottom:20px;
+    line-height:1.4;
+}
 
-    .success-box p{
-        color:#555;
-        margin-bottom:20px;
-    }
+.success-box p{
+    color:#666;
+    font-size:22px;
+    margin-bottom:35px;
+    line-height:1.6;
+}
 
-    .success-box a{
-        display:inline-block;
-        padding:12px 24px;
-        background:#0e3014;
-        color:#fff;
-        text-decoration:none;
-        border-radius:8px;
-    }
+.success-box a{
+    display:inline-block;
+    padding:18px 45px;
+    background:#198754;
+    color:#fff;
+    text-decoration:none;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:600;
+    transition:.3s;
+}
 
+.success-box a:hover{
+    background:#146c43;
+    transform:translateY(-3px);
+}
     </style>
 
 </head>

@@ -19,6 +19,10 @@ $result = mysqli_query($conn,$sql);
 <!DOCTYPE html>
 <html>
 <head>
+    
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Addresses</title>
     <link rel="stylesheet" href="assets/css/address.css">
 </head>

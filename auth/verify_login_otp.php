@@ -62,12 +62,17 @@ if (isset($_POST['verify'])) {
 <html>
 
 <head>
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Login OTP Verification</title>
-    <link rel="stylesheet" href="../assets/css/auth.css">
+<link rel="stylesheet" href="../assets/css/otp.css">
 </head>
 
 <body>
-
+<a href="register.php" class="back-btn">
+    ← Back
+</a>
 <div class="container">
 
 <h2>Verify Login OTP</h2>

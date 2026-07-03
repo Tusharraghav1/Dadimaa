@@ -355,6 +355,46 @@ textarea{
         padding:20px;
     }
 
+    /* =========================
+   TABLET BACK BUTTON
+========================= */
+
+.mobile-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.back-btn{
+    width:48px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    color:#198754;
+    text-decoration:none;
+    font-size:28px;
+    font-weight:600;
+    border:2px solid #198754;
+    border-radius:12px;
+    transition:.3s ease;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.back-btn:hover{
+    background:#198754;
+    color:#fff;
+    transform:translateX(-3px);
+}
+
+.mobile-header h2{
+    font-size:28px;
+    color:#163b1d;
+    font-weight:700;
+}
+
     .checkout-container{
         grid-template-columns:1fr;
         gap:20px;
@@ -431,208 +471,223 @@ textarea{
         font-size:17px;
     }
 }
-/* =========================
-   MOBILE
-   567px
-========================= */
-/* 
-@media screen and (max-width:567px){
-
-    body{
-        padding:10px;
-    }
-
-    .checkout-container{
-        display:flex;
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .address-card,
-    .summary-card{
-        padding:18px;
-        border-radius:15px;
-    }
-
-    .title-box{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .title-box h2{
-        font-size:24px;
-    }
-
-    .title-box p{
-        font-size:13px;
-    }
-
-    .icon{
-        width:50px;
-        height:50px;
-        font-size:24px;
-    }
-
-    .row{
-        display:flex;
-        flex-direction:column;
-        gap:10px;
-    }
-
-    .address-type{
-        flex-direction:column;
-    }
-
-    .type{
-        width:100%;
-    }
-
-    .checkbox{
-        justify-content:flex-start;
-    }
-
-    .product{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .product span{
-        margin-left:0;
-    }
-
-    .product img{
-        width:100px;
-        height:100px;
-    }
-
-    .summary-card h3{
-        font-size:22px;
-        text-align:center;
-    }
-
-    .total{
-        font-size:20px;
-    }
-
-    .order-btn{
-        font-size:16px;
-        padding:15px;
-    }
-} */
-
 
 @media (max-width:576px){
 
-    body{
-        padding:10px;
-    }
+body{
+    padding:0;
+    background:#f6f7fb;
+}
 
-    .checkout-container{
-        display:flex;
-        flex-direction:column;
-        gap:15px;
-    }
+.mobile-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px;
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
 
-    .address-card,
-    .summary-card{
-        width:100%;
-        padding:18px;
-        border-radius:15px;
-    }
+.back-btn{
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    background:#f2f3f5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    color:#222;
+    font-size:24px;
+    font-weight:600;
+}
 
-    .title-box{
-        flex-direction:column;
-        text-align:center;
-        gap:10px;
-    }
+.mobile-header h2{
+    font-size:24px;
+    color:#163b1d;
+}
 
-    .title-box h2{
-        font-size:26px;
-    }
+.checkout-container{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding:15px;
+}
 
-    .title-box p{
-        font-size:14px;
-    }
+/* Cards */
 
-    .row{
-        grid-template-columns:1fr;
-        gap:15px;
-    }
+.address-card,
+.summary-card{
+    width:100%;
+    padding:22px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
 
-    .input-group{
-        margin-bottom:15px;
-    }
+/* Hide desktop heading */
 
-    input,
-    textarea,
-    select{
-        padding:14px;
-        font-size:15px;
-    }
+.title-box{
+    display:block;
+    margin-bottom:20px;
+}
 
-    textarea{
-        height:110px;
-    }
+.title-box .icon{
+    display:none;
+}
 
-    /* Default Address */
+.title-box h2{
+    font-size:26px;
+    margin-bottom:5px;
+}
 
-    .default-address{
-        margin:20px 0;
-    }
+.title-box p{
+    font-size:14px;
+}
 
-    .checkbox-card{
-        padding:14px;
-        gap:12px;
-        border-radius:12px;
-    }
+/* Saved Address */
 
-    .checkbox-card input{
-        width:22px;
-        height:22px;
-    }
+.saved-address{
+    padding:18px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
 
-    .text strong{
-        font-size:15px;
-    }
+.saved-address h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
 
-    .text small{
-        font-size:12px;
-    }
+.saved-address p{
+    font-size:15px;
+    line-height:1.6;
+}
 
-    /* Summary */
+.saved-address label{
+    margin-top:15px;
+    font-size:15px;
+}
 
-    .summary-card h3{
-        font-size:24px;
-        text-align:center;
-    }
+/* Form */
 
-    .product{
-        gap:12px;
-    }
+.row{
+    display:block;
+}
 
-    .product img{
-        width:70px;
-        height:70px;
-    }
+.input-group{
+    margin-bottom:18px;
+}
 
-    .product h4{
-        font-size:16px;
-    }
+.input-group label{
+    font-size:15px;
+    margin-bottom:8px;
+}
 
-    .product p{
-        font-size:13px;
-    }
+input,
+textarea{
+    width:100%;
+    padding:16px;
+    font-size:16px;
+    border-radius:12px;
+}
 
-    .product span{
-        font-size:16px;
-    }
+textarea{
+    height:120px;
+}
 
-    .total{
-        font-size:26px;
-    }
+/* Default Address */
 
-    .order-btn{
-        padding:15px;
-        font-size:16px;
-    }
+.default-address{
+    margin-top:5px;
+}
+
+.checkbox-card{
+    width:100%;
+    padding:18px;
+    gap:15px;
+    border-radius:14px;
+}
+
+.checkbox-card input{
+    width:24px;
+    height:24px;
+}
+
+.text strong{
+    font-size:16px;
+}
+
+.text small{
+    display:block;
+    margin-top:5px;
+    font-size:13px;
+}
+
+/* Button */
+
+.order-btn{
+    width:100%;
+    height:55px;
+    font-size:18px;
+    border-radius:12px;
+    margin-top:20px;
+}
+
+/* Summary */
+
+.summary-card{
+    margin-top:5px;
+}
+
+.summary-card h3{
+    text-align:left;
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.product{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.product img{
+    width:75px;
+    height:75px;
+    border-radius:12px;
+}
+
+.product h4{
+    font-size:17px;
+    margin-bottom:4px;
+}
+
+.product p{
+    font-size:14px;
+}
+
+.product span{
+    font-size:18px;
+    font-weight:700;
+    margin-left:auto;
+}
+
+.summary-row{
+    font-size:17px;
+}
+
+.grand-total{
+    font-size:24px;
+}
+
+.grand-total strong{
+    font-size:28px;
+}
+
+hr{
+    margin:15px 0;
+}
+
 }

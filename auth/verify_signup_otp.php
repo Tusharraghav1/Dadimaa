@@ -63,14 +63,18 @@ if (mysqli_num_rows($result) == 1) {
 <!DOCTYPE html>
 <html>
 <head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Verify Signup OTP</title>
-
-<link rel="stylesheet" href="../assets/css/auth.css">
+<link rel="stylesheet" href="../assets/css/otp.css">
 
 </head>
 
 <body>
+ <a href="register.php" class="back-btn">
+    ← Back
+</a> 
 
 <div class="container">
 

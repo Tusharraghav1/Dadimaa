@@ -48,6 +48,9 @@ if(isset($_POST['change_password'])){
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Change Password</title>
 
 <style>
@@ -69,7 +72,7 @@ height:100vh;
 
 .card{
 background:#fff;
-padding:40px;
+padding:20px;
 width:450px;
 border-radius:15px;
 box-shadow:0 5px 20px rgba(0,0,0,.1);

@@ -30,35 +30,20 @@ $shipping = 50;
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Checkout</title>
+
     <link rel="stylesheet" href="../assets/css/checkout.css">
-
-    <style>
-
-    .saved-address{
-        background:#f7f7f7;
-        padding:20px;
-        border-radius:10px;
-        margin-bottom:20px;
-        border:1px solid #ddd;
-    }
-
-    .saved-address h3{
-        color:#0b4d1c;
-        margin-bottom:10px;
-    }
-
-    .saved-address label{
-        display:block;
-        margin-top:10px;
-        cursor:pointer;
-    }
-
-    </style>
-
 </head>
 <body>
-
+<div class="mobile-header">
+    <a href="../cart/cart.php" class="back-btn">
+        ←
+    </a>
+    <h2>Checkout</h2>
+</div>
 <div class="checkout-container">
 
     <!-- LEFT SIDE -->

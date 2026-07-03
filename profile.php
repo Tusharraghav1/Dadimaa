@@ -45,31 +45,39 @@ $address = mysqli_fetch_assoc($addressQuery);
 
 ?>
 
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Profile</title>
-    
+
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/profile.css">
 </head>
+
 <body>
 
-<!-- Mobile Header -->
+<!-- ================= Mobile Header ================= -->
 
 <div class="mobile-header">
-
-    <button class="menu-btn" id="menuBtn">
-        ☰
-    </button>
+<!-- 
+    <button type="button" class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button> -->
 
     <a href="index.php" class="back-btn">
-        ← Back to Home
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back to Home</span>
     </a>
 
 </div>
 
+<!-- ================= Profile Container ================= -->
 
 <div class="profile-container">
 
@@ -85,13 +93,9 @@ $address = mysqli_fetch_assoc($addressQuery);
 
             <div class="user-info">
 
-                <h2>
-                    <?php echo $_SESSION['user_name']; ?>
-                </h2>
+                <h2><?php echo $_SESSION['user_name']; ?></h2>
 
-                <p>
-                    Pickle Delights Customer
-                </p>
+                <p>Pickle Delights Customer</p>
 
             </div>
 
@@ -100,113 +104,67 @@ $address = mysqli_fetch_assoc($addressQuery);
         <ul class="menu">
 
             <li class="active">
-
-                <span>
-                    👤 My Profile
-                </span>
-
+                <span>👤 My Profile</span>
             </li>
 
             <li>
-
                 <a href="orders/my-orders.php">
-
-                    <span>
-                        📦 My Orders
-                    </span>
-
-                    <span class="arrow">
-                        ›
-                    </span>
-
+                    <span>📦 My Orders</span>
+                    <span class="arrow">›</span>
                 </a>
-
             </li>
 
             <li>
-
                 <a href="address.php">
-
-                    <span>
-                        📍 Addresses
-                    </span>
-
-                    <span class="arrow">
-                        ›
-                    </span>
-
+                    <span>📍 Addresses</span>
+                    <span class="arrow">›</span>
                 </a>
-
             </li>
 
             <li>
-
                 <a href="settings.php">
-
-                    <span>
-                        ⚙️ Settings
-                    </span>
-
-                    <span class="arrow">
-                        ›
-                    </span>
-
+                    <span>⚙️ Settings</span>
+                    <span class="arrow">›</span>
                 </a>
-
             </li>
 
             <li>
-
                 <a href="auth/logout.php" class="logout">
-
-                    <span>
-                        🚪 Logout
-                    </span>
-
-                    <span class="arrow">
-                        ›
-                    </span>
-
+                    <span>🚪 Logout</span>
+                    <span class="arrow">›</span>
                 </a>
-
             </li>
 
         </ul>
 
     </aside>
 
-
-    <!-- Right Content -->
+    <!-- Content -->
 
     <main class="content">
+
+        <!-- Welcome -->
 
         <section class="welcome-card">
 
             <div>
 
                 <h1>
-
                     Welcome,
                     <?php echo $_SESSION['user_name']; ?>
-
                 </h1>
 
                 <p>
-
                     Manage your account and orders
-
                 </p>
 
             </div>
 
             <div class="badge">
-
                 🏆 Premium Member
-
             </div>
 
         </section>
-
 
         <!-- Stats -->
 
@@ -215,62 +173,36 @@ $address = mysqli_fetch_assoc($addressQuery);
             <div class="stat-card">
 
                 <div class="icon green">
-
                     🛍
-
                 </div>
 
                 <div>
 
-                    <h2>
+                    <h2><?php echo $orderCount['total_orders']; ?></h2>
 
-                        <?php echo $orderCount['total_orders']; ?>
-
-                    </h2>
-
-                    <p>
-
-                        Orders
-
-                    </p>
+                    <p>Orders</p>
 
                 </div>
 
             </div>
 
-
-
             <div class="stat-card">
 
                 <div class="icon pink">
-
                     📍
-
                 </div>
 
                 <div>
 
-                    <h3>
-
-                        Address
-
-                    </h3>
+                    <h3>Address</h3>
 
                     <?php if($address){ ?>
 
-                        <p>
+                        <p><?php echo $address['address']; ?></p>
 
-                            <?php echo $address['address']; ?>
+                    <?php } else { ?>
 
-                        </p>
-
-                    <?php }else{ ?>
-
-                        <p>
-
-                            No Address Added
-
-                        </p>
+                        <p>No Address Added</p>
 
                     <?php } ?>
 
@@ -280,85 +212,47 @@ $address = mysqli_fetch_assoc($addressQuery);
 
         </section>
 
-
-
         <!-- Orders -->
 
         <section class="orders-card">
 
             <div class="card-header">
 
-                <h2>
-
-                    Recent Orders
-
-                </h2>
+                <h2>Recent Orders</h2>
 
             </div>
 
+            <?php if(mysqli_num_rows($recentOrders)>0){ ?>
 
-            <?php
+                <?php while($order=mysqli_fetch_assoc($recentOrders)){ ?>
 
-            if(mysqli_num_rows($recentOrders)>0){
+                <div class="order-item">
 
-            while($order=mysqli_fetch_assoc($recentOrders)){ ?>
+                    <img src="assets/img/<?php echo $order['image']; ?>" alt="Product">
 
+                    <div class="order-details">
 
+                        <h4><?php echo $order['product_name']; ?></h4>
 
-            <div class="order-item">
-
-                <img src="assets/img/<?php echo $order['image']; ?>">
-
-
-                <div class="order-details">
-
-                    <h4>
-
-                        <?php echo $order['product_name']; ?>
-
-                    </h4>
-
-                    <p>
-
-                        Qty :
-                        <?php echo $order['quantity']; ?>
-
-                    </p>
-
-                </div>
-
-
-                <strong>
-
-                    ₹<?php echo $order['total_price']; ?>
-
-                </strong>
-
-            </div>
-
-            <?php }
-
-            }else{ ?>
-
-                <div class="empty-orders">
-
-                    <div class="empty-icon">
-
-                        📋
+                        <p>Qty : <?php echo $order['quantity']; ?></p>
 
                     </div>
 
-                    <h3>
+                    <strong>₹<?php echo $order['total_price']; ?></strong>
 
-                        No Recent Orders
+                </div>
 
-                    </h3>
+                <?php } ?>
 
-                    <p>
+            <?php } else { ?>
 
-                        You have no recent orders.
+                <div class="empty-orders">
 
-                    </p>
+                    <div class="empty-icon">📋</div>
+
+                    <h3>No Recent Orders</h3>
+
+                    <p>You have no recent orders.</p>
 
                 </div>
 
@@ -369,14 +263,26 @@ $address = mysqli_fetch_assoc($addressQuery);
     </main>
 
 </div>
+
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
 AOS.init({
-duration:900,
-once:true
+    duration:900,
+    once:true
 });
+
+
+
+
+// const menuBtn = document.getElementById("menuBtn");
+// const sidebar = document.getElementById("sidebar");
+
+// menuBtn.addEventListener("click", () => {
+//     sidebar.classList.toggle("active");
+// });
 </script>
+
 <script src="assets/js/profile.js"></script>
 
 </body>

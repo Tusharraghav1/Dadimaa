@@ -55,13 +55,14 @@ $result = mysqli_query($conn,
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Verify OTP</title>
-
-<link rel="stylesheet" href="../assets/css/auth.css">
+<link rel="stylesheet" href="../assets/css/otp.css">
 
 </head>
 
 <body>
-
+<a href="register.php" class="back-btn">
+    ← Back
+</a>
 <a href="forgot_password.php" class="back-btn">← Back</a>
 
 <div class="container">
